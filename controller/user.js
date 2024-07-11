@@ -387,7 +387,7 @@ exports.resetPasswordToken = async (req, res) => {
             },
             { new: true })
         //create url
-        const url = `http://localhost:5173/password/reset/${token}`
+        const url = `https://harshvimal-portfolio-dashboard.netlify.app/password/reset/${token}`
         //send mail conataining the url
         await mailSender(email, 'Password Reset Link', `Password Reset Link : ${url}`)
 
