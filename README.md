@@ -1,26 +1,45 @@
-<h1 align="center" id="title">✨ FullStack Portfolio ✨</h1> <p id="description" align="center"> A fully-featured portfolio website designed to showcase my professional journey, skills, and projects, built using the <strong>MERN stack (MongoDB, Express, React, Node.js)</strong>. The website has a modern, sleek, and responsive design, crafted with <strong>Tailwind CSS</strong>, ensuring a great user experience on both desktop and mobile devices. It also includes an <strong>Admin Dashboard</strong> for easy content management, allowing real-time updates without modifying the website’s source code. </p> <h2 align="center">🚀 <a href="https://harshkumarvimal-portfolio.netlify.app">Live Demo</a> 🚀</h2> <h2>📸 Project Screenshots</h2> <div align="center"> <img src="https://i.ibb.co/LRK0xjz/Screenshot-2024-10-19-200546.png" alt="project-screenshot" width="700" height="400"> <img src="https://i.ibb.co/vQg33pz/Screenshot-2024-10-19-200615.png" alt="project-screenshot" width="700" height="400"> <img src="https://i.ibb.co/NnwG899/Screenshot-2024-10-19-200651.png" alt="project-screenshot" width="700" height="400"> <img src="https://i.ibb.co/c60mmNG/Screenshot-2024-10-19-200706.png" alt="project-screenshot" width="700" height="400"> </div> <h2>🧐 Features</h2>
-This project comes with several key features designed to provide a dynamic and interactive experience for both users and the admin:
+<h1 align="center" id="title">✨ FullStack Portfolio ✨</h1>
 
-🌐 Responsive Design: The entire UI is built with Tailwind CSS, making the website fully responsive across all devices — whether desktop, tablet, or mobile.
-🛠 Skills & Projects Management: Showcase a curated list of skills and projects, with the ability to add, edit, or remove them directly from the Admin Dashboard.
-📅 Interactive Timeline: A visually engaging timeline highlighting key career milestones, which can be updated easily through the dashboard.
-🖥️ Software Proficiency: Display your proficiency in software tools with an interactive and well-organized section.
-🔗 Media & Social Links: Easy integration of social media profiles and relevant links to allow users to quickly connect.
-✉️ Real-Time Messaging: Visitors can send messages, which are stored in a MongoDB database and viewable from the admin dashboard for quick responses.
-<h2>⚙️ Admin Dashboard</h2>
-The Admin Dashboard is the heart of this portfolio, giving me full control over the content. Here’s what can be managed:
+<p id="description">This is a full-featured portfolio website designed to highlight my professional journey and technical skills built using the MERN stack (MongoDB Express React Node.js). The user interface is styled with Tailwind CSS providing a sleek modern and responsive design that adapts beautifully to both desktop and mobile devices. The website not only showcases my skills projects and career timeline but also includes dynamic features for managing the portfolio's content via an intuitive admin dashboard. <br><br> <strong>Admin Dashboard:</strong> The admin dashboard is the backbone of this portfolio allowing me to update content in real time without modifying the website’s source code. It features: Skills Management: Add edit or delete skills as my expertise evolves. Projects Management: Easily add new projects with detailed descriptions and links to live demos or source code. Timeline Updates: Modify the timeline to reflect new career milestones or significant events. Software Tools: Keep my software proficiency section current by managing the tools I am proficient in. Media Links: Manage and update media links ensuring that visitors always have access to the latest social profiles and platforms. Resume Management: Upload new resumes directly from the dashboard keeping the downloadable file up to date. Message Center: View messages sent by visitors and manage responses all in one place.</p>
 
-Skills Management: Add, edit, or delete skills as I grow and learn new technologies.
-Projects Management: Easily add or modify projects, including detailed descriptions, technologies used, and links to live demos or GitHub repos.
-Timeline Updates: Keep the career timeline updated to reflect my most recent milestones and achievements.
-Software Tools: Manage and update the software tools section as I enhance my proficiency in different technologies.
-Media Links: Keep media and social links current to ensure visitors can always reach me.
-Resume Management: Upload and update the resume directly from the dashboard.
-Message Center: View and manage all messages sent by portfolio visitors in one centralized location.
-<h2>💻 Built With</h2>
-This portfolio leverages modern technologies to ensure robust functionality and a clean, scalable structure:
+<h2>🚀 Demo</h2>
 
-🖥️ React.js – For the frontend, providing a dynamic and responsive user interface.
-🎨 Tailwind CSS – For a sleek, customizable, and mobile-first design.
-🔧 Node.js & Express.js – To handle the server-side operations and backend logic.
-🗄️ MongoDB – For storing data, including messages from visitors and portfolio content.
+[https://harshkumarvimal-portfolio.netlify.app](https://harshkumarvimal-portfolio.netlify.app)
+
+<h2>Project Screenshots:</h2>
+
+<img src="https://i.ibb.co/LRK0xjz/Screenshot-2024-10-19-200546.png" alt="project-screenshot" width="700" height="400/">
+<br/>
+<br/>
+<img src="https://i.ibb.co/vQg33pz/Screenshot-2024-10-19-200615.png" alt="project-screenshot" width="700" height="400/">
+<br/>
+<br/>
+<img src="https://i.ibb.co/NnwG899/Screenshot-2024-10-19-200651.png" alt="project-screenshot" width="700" height="400/">
+<br/>
+<br/>
+<img src="https://i.ibb.co/c60mmNG/Screenshot-2024-10-19-200706.png" alt="project-screenshot" width="700" height="400/">
+
+  
+  
+<h2>🧐 Features</h2>
+
+Here're some of the project's best features:
+
+*   Responsive Design: Fully responsive UI built with Tailwind CSS ensuring seamless functionality across all devices.<br/>
+*   Skills & Projects Section: Display an up-to-date list of skills and projects.<br/>
+*   Timeline: An interactive timeline that highlights career milestones and experiences.<br/>
+*   Software Proficiency: A section showcasing my proficiency in various software tools.<br/>
+*   Media Links: Integration of social media and other relevant links for easy access.<br/>
+*   Real-Time Messaging: Visitors can send messages which are stored in a database and viewable via the admin dashboard.<br/>
+
+  
+  
+<h2>💻 Built with</h2>
+
+Technologies used in the project:<br/>
+
+*   React js<br/>
+*   Tailwind Css<br/>
+*   Node js<br/>
+*   Express js<br/>
+*   Mongodb<br/>
