@@ -1,0 +1,133 @@
+import React, { useEffect, useState } from "react";
+import { useParams, Link, useNavigate } from "react-router-dom";
+
+import axios from "axios";
+
+
+const ProjectView = () => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [technologies, setTechnologies] = useState("");
+  const [stack, setStack] = useState("");
+  const [gitRepoLink, setGitRepoLink] = useState("");
+  const [deployed, setDeployed] = useState("");
+  const [projectLink, setProjectLink] = useState("");
+  const [projectBanner, setProjectBanner] = useState("");
+  const [projectBannerPreview, setProjectBannerPreview] = useState("");
+  const { id } = useParams();
+
+  useEffect(() => {
+    const getProject = async () => {
+      await axios
+        .get(`https://portfolio-backend-code.onrender.com/api/v1/project/get/${id}`, {
+          withCredentials: true,
+        })
+        .then((res) => {
+          setTitle(res.data.project.title);
+          setDescription(res.data.project.description);
+          setStack(res.data.project.stack);
+          setDeployed(res.data.project.deployed);
+          setTechnologies(res.data.project.technologies);
+          setGitRepoLink(res.data.project.gitRepoLink);
+          setProjectLink(res.data.project.projectLink);
+          setProjectBanner(
+            res.data.project.projectBanner && res.data.project.projectBanner.url
+          );
+          setProjectBannerPreview(
+            res.data.project.projectBanner && res.data.project.projectBanner.url
+          );
+        })
+        .catch((error) => {
+          toast.error(error.response.data.message);
+        });
+    };
+    getProject();
+  }, [id]);
+
+  const descriptionList = description.split(". ");
+  const technologiesList = technologies.split(", ");
+
+  const navigateTo = useNavigate();
+  const handleReturnToPortfolio = () => {
+    navigateTo("/");
+  };
+
+  return (
+    <>
+      <div className="flex  justify-center items-center min-h-[100vh] sm:gap-4 sm:py-4 text-white">
+        <div className="w-[100%] px-5 md:w-[1000px] pb-5 border bg-slate-700 shadow-md shadow-cyan-300   rounded-lg">
+          <div className="space-y-12">
+            <div className="border-b border-gray-900/10 pb-10">
+              <div className="flex justify-end">
+                <button  className=" mt-5 w-full sm:w-52 bg-blue-500 hover:bg-cyan-600 text-white font-medium rounded-lg py-2.5"
+                onClick={handleReturnToPortfolio}>
+                  Return to Portfolio
+                </button>
+              </div>
+              <div className="mt-10 flex flex-col gap-5">
+                <div className="w-full sm:col-span-4">
+                  <h1 className="text-2xl font-bold mb-4">{title}</h1>
+                  <img
+                    src={
+                      projectBannerPreview
+                        ? projectBannerPreview
+                        : "/avatarHolder.jpg"
+                    }
+                    alt="projectBanner"
+                    className="w-full  h-80 object-contain"
+                  />
+                </div>
+                <div className="w-full sm:col-span-4">
+                  <p className="text-2xl mb-2">Description:</p>
+                  <ul className="list-disc">
+                    {descriptionList.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="w-full sm:col-span-4">
+                  <p className="text-2xl mb-2">Technologies:</p>
+                  <ul className="list-disc">
+                    {technologiesList.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="w-full sm:col-span-4">
+                  <p className="text-2xl mb-2">Stack:</p>
+                  <p>{stack}</p>
+                </div>
+                <div className="w-full sm:col-span-4">
+                  <p className="text-2xl mb-2">Deployed:</p>
+                  <p>{deployed}</p>
+                </div>
+                <div className="w-full sm:col-span-4">
+                  <p className="text-2xl mb-2">Github Repository Link:</p>
+                  <Link
+                    className="text-sky-700"
+                    target="_blank"
+                    to={gitRepoLink}
+                  >
+                    {gitRepoLink}
+                  </Link>
+                </div>
+                <div className="w-full sm:col-span-4">
+                  <p className="text-2xl mb-2">Project Link:</p>
+                  <Link
+                    className="text-sky-700"
+                    target="_blank"
+                    to={projectLink}
+                  >
+                    {projectLink}
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default ProjectView;
