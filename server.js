@@ -47,7 +47,9 @@ dbconnect()
 
 
 
-
+app.get("/", (req, res) => {
+    res.send("Server is live! 🔥");
+});
 
 
 app.listen(PORT, () => {
